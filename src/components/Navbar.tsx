@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Education", href: "#education" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#footer" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Skills", href: "/skills" },
+  { label: "Projects", href: "/projects" },
 ];
 
 const Navbar = () => {
@@ -27,24 +28,30 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="#" className="font-heading text-lg font-bold tracking-tight text-foreground">
+        <NavLink to="/" className="font-heading text-lg font-bold tracking-tight text-foreground">
           GMC<span className="text-muted-foreground">.</span>
-        </a>
+        </NavLink>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-1">
           {links.map((l) => (
-            <a
+            <NavLink
               key={l.href}
-              href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+              to={l.href}
+              end={l.href === "/"}
+              className={({ isActive }) =>
+                cn(
+                  "text-sm px-4 py-2 rounded-lg transition-all duration-200",
+                  isActive
+                    ? "text-foreground bg-accent font-medium"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                )
+              }
             >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button
           className="md:hidden text-foreground"
           onClick={() => setOpen(!open)}
@@ -54,7 +61,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -63,16 +69,24 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border overflow-hidden"
           >
-            <div className="flex flex-col px-6 py-4 gap-4">
+            <div className="flex flex-col px-6 py-4 gap-1">
               {links.map((l) => (
-                <a
+                <NavLink
                   key={l.href}
-                  href={l.href}
+                  to={l.href}
+                  end={l.href === "/"}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className={({ isActive }) =>
+                    cn(
+                      "text-sm px-4 py-3 rounded-lg transition-colors",
+                      isActive
+                        ? "text-foreground bg-accent font-medium"
+                        : "text-muted-foreground hover:text-foreground"
+                    )
+                  }
                 >
                   {l.label}
-                </a>
+                </NavLink>
               ))}
             </div>
           </motion.div>
