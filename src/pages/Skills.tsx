@@ -6,12 +6,9 @@ const skillCategories = [
     category: "Frontend",
     description: "Teknologi yang saya gunakan untuk membangun antarmuka pengguna yang interaktif dan responsif.",
     skills: [
-      { name: "HTML", level: 90, desc: "Struktur web semantik dan accessible" },
-      { name: "CSS", level: 80, desc: "Styling, layouting, dan responsif design" },
-      { name: "JavaScript", level: 75, desc: "Logika, DOM manipulation, async programming" },
-      { name: "React", level: 65, desc: "Component-based UI, hooks, state management" },
-      { name: "TypeScript", level: 55, desc: "Type safety untuk JavaScript modern" },
-      { name: "Tailwind CSS", level: 70, desc: "Utility-first CSS framework" },
+      { name: "HTML", level: 60, desc: "Struktur web semantik dan accessible" },
+      { name: "CSS", level: 50, desc: "Styling, layouting, dan responsif design" },
+      { name: "JavaScript", level: 70, desc: "Logika, DOM manipulation, async programming" },
     ],
   },
   {
@@ -29,14 +26,22 @@ const skillCategories = [
       { name: "Git", level: 60, desc: "Version control dan kolaborasi" },
       { name: "VS Code", level: 85, desc: "Code editor utama" },
       { name: "GitHub", level: 65, desc: "Repository hosting dan project management" },
-      { name: "Figma", level: 40, desc: "UI/UX prototyping dasar" },
+      { name: "Figma", level: 20, desc: "UI/UX prototyping dasar" },
     ],
   },
 ];
 
 const techBadges = [
-  "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Node.js",
-  "Tailwind CSS", "Git", "GitHub", "VS Code", "Figma", "REST API",
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "Node.js",
+  "Tailwind CSS",
+  "Git",
+  "GitHub",
+  "VS Code",
+  "Figma",
+  "REST API",
 ];
 
 const Skills = () => {
@@ -56,8 +61,8 @@ const Skills = () => {
               Skills & Technologies
             </h1>
             <p className="text-muted-foreground mt-4 max-w-xl text-[15px] leading-relaxed">
-              Berbagai teknologi yang sudah saya pelajari dan gunakan dalam membangun web applications. 
-              Selalu antusias untuk mempelajari hal baru.
+              Berbagai teknologi yang sudah saya pelajari dan gunakan dalam membangun web applications. Selalu antusias
+              untuk mempelajari hal baru.
             </p>
           </motion.div>
         </div>
@@ -111,10 +116,7 @@ const Skills = () => {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   {cat.skills.map((skill, i) => (
-                    <div
-                      key={skill.name}
-                      className="p-5 rounded-xl bg-card border border-border space-y-3"
-                    >
+                    <div key={skill.name} className="p-5 rounded-xl bg-card border border-border space-y-3">
                       <div className="flex justify-between items-start">
                         <div>
                           <p className="font-heading font-semibold text-foreground">{skill.name}</p>
