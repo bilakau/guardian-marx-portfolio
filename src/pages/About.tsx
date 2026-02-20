@@ -11,21 +11,21 @@ const education = [
   {
     school: "SD Negeri Gajing Jaya",
     period: "Sekolah Dasar",
-    year: "2014 — 2020",
+    year: "2017 — 2022",
     desc: "Pendidikan dasar yang membentuk fondasi awal perjalanan akademik. Di sinilah rasa ingin tahu terhadap teknologi pertama kali muncul.",
     icon: BookOpen,
   },
   {
     school: "SMP Negeri 9 Pematang Siantar",
     period: "Sekolah Menengah Pertama",
-    year: "2020 — 2023",
+    year: "2023 — 2025",
     desc: "Masa di mana minat terhadap dunia komputer dan internet mulai berkembang. Mulai belajar coding secara otodidak dan membangun project pertama.",
     icon: Calendar,
   },
   {
     school: "SMK — Jurusan TJKT",
     period: "Sekolah Menengah Kejuruan",
-    year: "2023 — Sekarang",
+    year: "2025 — Sekarang",
     desc: "Mendalami Teknik Jaringan Komputer dan Telekomunikasi secara formal. Mengasah skill programming, networking, dan pengembangan web secara profesional.",
     icon: GraduationCap,
   },
@@ -71,23 +71,23 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
                 <p>
-                  Hai! Nama saya <span className="text-foreground font-medium">Guardian Marx Christocent</span>. 
-                  Saya adalah seorang developer pemula yang memiliki semangat tinggi dalam dunia pengembangan web. 
-                  Perjalanan saya dimulai pada tahun 2020, ketika saya pertama kali berkenalan dengan HTML dan CSS.
+                  Hai! Nama saya <span className="text-foreground font-medium">Guardian Marx Christocent</span>. Saya
+                  adalah seorang developer pemula yang memiliki semangat tinggi dalam dunia pengembangan web. Perjalanan
+                  saya dimulai pada tahun 2020, ketika saya pertama kali berkenalan dengan HTML dan CSS.
                 </p>
                 <p>
-                  Sejak saat itu, rasa ingin tahu saya terus berkembang. Saya mulai mempelajari JavaScript, 
-                  kemudian melangkah ke React dan TypeScript. Setiap hari adalah kesempatan baru untuk belajar 
-                  sesuatu yang menarik di dunia programming.
+                  Sejak saat itu, rasa ingin tahu saya terus berkembang. Saya mulai mempelajari JavaScript, kemudian
+                  melangkah ke React dan TypeScript. Setiap hari adalah kesempatan baru untuk belajar sesuatu yang
+                  menarik di dunia programming.
                 </p>
                 <p>
-                  Saat ini, saya adalah siswa SMK jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT). 
-                  Di sekolah, saya mempelajari networking dan infrastruktur IT, sementara di waktu luang saya 
-                  terus mengasah kemampuan web development secara otodidak.
+                  Saat ini, saya adalah siswa SMK jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT). Di
+                  sekolah, saya mempelajari networking dan infrastruktur IT, sementara di waktu luang saya terus
+                  mengasah kemampuan web development secara otodidak.
                 </p>
                 <p>
-                  Misi saya sederhana: terus belajar, terus membangun, dan terus berbagi. 
-                  Saya percaya bahwa setiap project — sekecil apapun — adalah langkah menuju developer yang lebih baik.
+                  Misi saya sederhana: terus belajar, terus membangun, dan terus berbagi. Saya percaya bahwa setiap
+                  project — sekecil apapun — adalah langkah menuju developer yang lebih baik.
                 </p>
               </div>
             </motion.div>
@@ -150,9 +150,11 @@ const About = () => {
                   }`}
                 >
                   {/* Dot */}
-                  <div className={`absolute top-2 left-[14px] md:left-auto ${
-                    i % 2 === 0 ? "md:right-[-9px]" : "md:left-[-9px]"
-                  } w-[18px] h-[18px] rounded-full border-2 border-muted-foreground bg-background z-10`}>
+                  <div
+                    className={`absolute top-2 left-[14px] md:left-auto ${
+                      i % 2 === 0 ? "md:right-[-9px]" : "md:left-[-9px]"
+                    } w-[18px] h-[18px] rounded-full border-2 border-muted-foreground bg-background z-10`}
+                  >
                     <div className="w-2 h-2 rounded-full bg-muted-foreground absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                   </div>
 
