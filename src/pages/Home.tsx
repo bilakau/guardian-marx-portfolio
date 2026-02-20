@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const stats = [
   { value: "4+", label: "Tahun Coding" },
   { value: "3+", label: "Projects" },
-  { value: "6+", label: "Tech Stack" },
+  { value: "5+", label: "Tech Stack" },
 ];
 
 const Home = () => {
@@ -46,7 +46,8 @@ const Home = () => {
                   transition={{ delay: 0.5 }}
                   className="text-lg md:text-xl text-muted-foreground mt-6 max-w-lg"
                 >
-                  Beginner Developer • Web Enthusiast. Membangun pengalaman digital yang menarik dan fungsional sejak 2020.
+                  Beginner Developer • Web Enthusiast. Membangun pengalaman digital yang menarik dan fungsional sejak
+                  2020.
                 </motion.p>
               </div>
 
@@ -119,7 +120,7 @@ const Home = () => {
               {
                 icon: Monitor,
                 title: "Frontend Development",
-                desc: "Membangun antarmuka web yang responsif dan interaktif menggunakan HTML, CSS, JavaScript, React, dan Tailwind CSS.",
+                desc: "Membangun antarmuka web yang responsif dan interaktif menggunakan HTML, CSS, JavaScript",
               },
               {
                 icon: Code2,
@@ -164,7 +165,8 @@ const Home = () => {
               Tertarik melihat karya saya?
             </h2>
             <p className="text-muted-foreground">
-              Jelajahi project yang sudah saya buat, dari web AI hingga web komik — semua dibuat dengan passion dan keinginan untuk terus belajar.
+              Jelajahi project yang sudah saya buat, dari web AI hingga web komik — semua dibuat dengan passion dan
+              keinginan untuk terus belajar.
             </p>
             <Button
               asChild
