@@ -26,23 +26,11 @@ const skillCategories = [
       { name: "Git", level: 60, desc: "Version control dan kolaborasi" },
       { name: "VS Code", level: 85, desc: "Code editor utama" },
       { name: "GitHub", level: 65, desc: "Repository hosting dan project management" },
-      { name: "Figma", level: 20, desc: "UI/UX prototyping dasar" },
     ],
   },
 ];
 
-const techBadges = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "Node.js",
-  "Tailwind CSS",
-  "Git",
-  "GitHub",
-  "VS Code",
-  "Figma",
-  "REST API",
-];
+const techBadges = ["HTML5", "CSS3", "JavaScript", "Node.js", "Git", "GitHub", "VS Code", "REST API"];
 
 const Skills = () => {
   return (
