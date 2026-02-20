@@ -45,7 +45,7 @@ const Footer = () => {
                 <Mail size={14} /> guardianmarx@gmail.com
               </span>
               <span className="text-sm text-muted-foreground flex items-center gap-2">
-                <Github size={14} /> github.com/tralalawabi-art
+                <Github size={14} /> github.com/PainMods
               </span>
             </div>
           </div>
