@@ -43,13 +43,22 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <p className="text-sm font-heading uppercase tracking-[0.2em] text-muted-foreground mb-3">About Me</p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Mengenal lebih dekat siapa saya
-            </h1>
-            <div className="flex items-center gap-2 mt-4 text-muted-foreground">
-              <MapPin size={16} />
-              <span className="text-sm">Pematang Siantar, Sumatera Utara, Indonesia</span>
+            <div className="flex items-center gap-6">
+              <img
+                src="https://cdn.yupra.my.id/yp/6q3zt0ad.png"
+                alt="Guardian Marx Christocent"
+                className="w-20 h-20 md:w-28 md:h-28 rounded-full object-cover border-2 border-border shadow-lg flex-shrink-0"
+              />
+              <div>
+                <p className="text-sm font-heading uppercase tracking-[0.2em] text-muted-foreground mb-3">About Me</p>
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                  Mengenal lebih dekat siapa saya
+                </h1>
+                <div className="flex items-center gap-2 mt-4 text-muted-foreground">
+                  <MapPin size={16} />
+                  <span className="text-sm">Pematang Siantar, Sumatera Utara, Indonesia</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

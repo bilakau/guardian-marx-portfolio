@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Mail } from "lucide-react";
+import { ArrowUp, Github, Mail, MessageCircle, Instagram } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -25,6 +25,7 @@ const Footer = () => {
                 { label: "About", to: "/about" },
                 { label: "Skills", to: "/skills" },
                 { label: "Projects", to: "/projects" },
+                { label: "Contact", to: "/contact" },
               ].map((link) => (
                 <NavLink
                   key={link.to}
@@ -41,12 +42,18 @@ const Footer = () => {
           <div className="space-y-3">
             <h4 className="font-heading font-semibold text-foreground text-sm uppercase tracking-wider">Kontak</h4>
             <div className="flex flex-col gap-2">
-              <span className="text-sm text-muted-foreground flex items-center gap-2">
+              <a href="mailto:guardianmarx@gmail.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
                 <Mail size={14} /> guardianmarx@gmail.com
-              </span>
-              <span className="text-sm text-muted-foreground flex items-center gap-2">
+              </a>
+              <a href="https://wa.me/628870864467" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                <MessageCircle size={14} /> +62 887-0864-4467
+              </a>
+              <a href="https://instagram.com/fmcstoree" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                <Instagram size={14} /> @fmcstoree
+              </a>
+              <a href="https://github.com/PainMods" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
                 <Github size={14} /> github.com/PainMods
-              </span>
+              </a>
             </div>
           </div>
         </div>
