@@ -1,56 +1,35 @@
-# Portfolio Website — Guardian Marx Christocent
 
-Website portofolio profesional dengan desain modern, animasi halus, dan tata letak expert-level.
 
-## Design Direction
+# Plan: Page Transitions, Avatar, Contact Page & Favicon
 
-- **Warna**: Dark theme utama dengan aksen Abu abu/ hitam gradient 
-- **Typography**: Clean dan bold, dengan hierarchy yang jelas
-- **Layout**: Single-page scroll dengan navigasi sticky, section-based layout
-- **Animasi**: Smooth scroll reveal, hover effects pada cards dan tombol
+## 1. Animated Page Transitions
+- Wrap `<Outlet />` in `Layout.tsx` with `framer-motion`'s `AnimatePresence` and a `motion.div` keyed by `pathname`
+- Fade + slight slide up on enter/exit for smooth transitions
 
----
+## 2. Profile Avatar
+- **Hero section** (`Home.tsx`): Add circular avatar image next to the name/text area
+- **About page** (`About.tsx`): Add avatar in the bio section header area
+- Image URL: `https://cdn.yupra.my.id/yp/6q3zt0ad.png`
 
-## Sections & Fitur
+## 3. Contact Page
+- Create `src/pages/Contact.tsx` with:
+  - WhatsApp link (`https://wa.me/628870864467`) — direct click to chat
+  - Email (`guardianmarx@gmail.com`) — mailto link
+  - Instagram (`@fmcstoree`) — link to `https://instagram.com/fmcstoree`
+  - Contact form (name, email, message) that opens WhatsApp or mailto with prefilled content
+- Add "Contact" to navbar links and footer navigation
+- Register `/contact` route in `App.tsx`
 
-### 1. Hero Section
+## 4. Website Favicon
+- Update `index.html` to use the profile image as favicon via `<link rel="icon" href="https://cdn.yupra.my.id/yp/6q3zt0ad.png">`
 
-- Nama besar "Guardian Marx Christocent" dengan animasi typing atau fade-in
-- Tagline singkat: "Beginner Developer • Web Enthusiast"
-- Lokasi: Pematang Siantar, Sumatera Utara
-- CTA button: "View My Work" dan "Contact Me"
-- Background gradient gelap dengan efek subtle particles atau grid pattern
+## Files to modify
+- `index.html` — favicon
+- `src/components/Layout.tsx` — page transition animation
+- `src/pages/Home.tsx` — add avatar to hero
+- `src/pages/About.tsx` — add avatar to bio section
+- `src/components/Navbar.tsx` — add Contact link
+- `src/components/Footer.tsx` — add Contact link + update contact info with WhatsApp/Instagram
+- `src/App.tsx` — add Contact route
+- **New**: `src/pages/Contact.tsx`
 
-### 2. About Me
-
-- Layout dua kolom: teks bio di kiri, info highlight di kanan
-- Bio lengkap tentang perjalanan sebagai developer
-- Highlight cards: "Coding since 2020", "SMK TJKT Student", "Coding as Hobby"
-- Desain clean dengan ikon-ikon pendukung
-
-### 3. Skills / Tech Stack
-
-- Tampilan visual skill badges: JavaScript, HTML, Node.js, React, TypeScript, Tailwind CSS
-- Progress bar atau icon grid yang menarik
-- Kategori: Frontend, Backend, Tools
-
-### 4. Education Timeline
-
-- Timeline vertikal yang elegan
-- SD Negeri Gajing Jaya → SMP Negeri 9 Pematang Siantar → SMK (TJKT)
-- Dengan ikon dan warna aksen di setiap titik
-
-### 5. Projects Showcase
-
-- Grid 3 kolom dengan project cards yang eye-catching
-- Setiap card menampilkan: preview image, judul, deskripsi, tech stack badges, dan link ke live site
-- Hover effect: card terangkat dengan shadow
-- **Project 1**: Web AI (ai.fmcstore.web.id) — Vanilla JS, SPA
-- **Project 2**: Web Jualan (cloud.fmcstore.web.id) — Vanilla JS
-- **Project 3**: Web Comic (fmccomic.my.id) — React, TypeScript, Tailwind CSS
-
-### 6. Footer
-
-- Link sosial media / kontak
-- Copyright text
-- Back to top button
