@@ -35,20 +35,34 @@ const Home = () => {
                 <span>Pematang Siantar, Sumatera Utara</span>
               </motion.div>
 
-              <div>
-                <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9]">
-                  <span className="block text-foreground">Guardian Marx</span>
-                  <span className="block text-muted-foreground">Christocent</span>
-                </h1>
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="text-lg md:text-xl text-muted-foreground mt-6 max-w-lg"
+              <div className="flex flex-col-reverse md:flex-row md:items-center md:gap-10">
+                <div>
+                  <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9]">
+                    <span className="block text-foreground">Guardian Marx</span>
+                    <span className="block text-muted-foreground">Christocent</span>
+                  </h1>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    className="text-lg md:text-xl text-muted-foreground mt-6 max-w-lg"
+                  >
+                    Beginner Developer • Web Enthusiast. Membangun pengalaman digital yang menarik dan fungsional sejak
+                    2020.
+                  </motion.p>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="flex-shrink-0 mb-6 md:mb-0"
                 >
-                  Beginner Developer • Web Enthusiast. Membangun pengalaman digital yang menarik dan fungsional sejak
-                  2020.
-                </motion.p>
+                  <img
+                    src="https://cdn.yupra.my.id/yp/6q3zt0ad.png"
+                    alt="Guardian Marx Christocent"
+                    className="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover border-2 border-border shadow-lg"
+                  />
+                </motion.div>
               </div>
 
               <motion.div
